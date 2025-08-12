@@ -1,103 +1,145 @@
+import Button from "@/components/Elements/Button";
+import Hero from "@/components/Layouts/Hero/Hero";
+import Statistic from "@/components/Layouts/Statistic/Statistic";
 import Image from "next/image";
+import HomeCard from "@/components/Fragments/HomeCard";
+import Partner from "@/components/Fragments/Partner";
 
-export default function Home() {
+const Home = () =>{
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="font-lato w-full flex flex-col min-h-screen">
+      <Hero />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <section className="py-10 relative bg-white overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full bg-bgsec clip-top-triangle z-10"></div>
+
+        {/* Konten */}
+        <div className="relative max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-10 items-center z-20">
+          {/* Teks */}
+          <div>
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+              Reliable and durable <br />
+              bodywork that exceeds <br />
+              customer expectations
+            </h2>
+            <p className="text-black leading-relaxed">
+              At our coachbuilding facility, we take pride in delivering
+              bodywork that goes beyond aesthetics — we build for strength,
+              safety, and long-term performance. Every vehicle body we produce
+              is engineered with precision, using high-quality materials and
+              expert craftsmanship to ensure durability in all conditions.
+            </p>
+          </div>
+
+          <div className="relative w-fit mx-auto">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/assets/truk1.svg" // ganti dengan path gambar kamu
+              alt="Truck"
+              width={500}
+              height={300}
+              className="w-full max-w-md shadow-xl"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* Optional: Efek tumpukan */}
+            <div className="absolute top-2 left-2 w-full h-full border border-gray-300 -z-10"></div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <Statistic />
+
+      <section className="relative bg-white">
+        <div className="relative max-w-6xl mx-auto mb-0 px-6 py-25 pb-0 flex flex-col md:flex-row items-center z-10">
+          <div className="md:w-1/2">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+              The Technology <br /> Behind Our Manufacturing
+            </h2>
+            <p className="text-text-black mb-4">
+              Our manufacturing services are designed to meet the unique needs
+              of our customers. We offer a wide range of products and services
+              that are tailored to your specific requirements.
+            </p>
+            <p className="text-text-black mb-6">
+              Our focus is on meeting the needs of our customers. We work
+              closely with you to understand your requirements and provide the
+              best solutions.
+            </p>
+            <Button to="/aboutus">Learn More</Button>
+          </div>
+
+          <div className="md:w-1/2 relative flex justify-center items-center">
+            {/* Circle Background */}
+            <div className="absolute w-110 h-110 ml-30 bg-bgsec rounded-full z-0"></div>
+
+            {/* Image */}
+            <Image
+              src="/assets/laptop.png" // ganti dengan path gambar kamu
+              alt="Technology Devices"
+              width={500}
+              height={300}
+              className="w-[70%] relative ml-30 object-contain"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="relative bg-bgsec py-50 pb-10 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-50 bg-white clip-top-left-triangle z-0"></div>
+
+        <div className="relative max-w-6xl mx-auto px-6 z-10">
+          <h2 className="text-3xl font-bold text-gray-900 mb-12">
+            Competitive Advantage
+          </h2>
+          <div className="grid gap-6 md:grid-cols-3">
+            <HomeCard
+              image="/assets/card1.svg"
+              title="Uncompromising Build Quality"
+              description="Ideal for manufacturers. Essential features to streamline production and distribution. Perfect for small teams."
+            />
+            <HomeCard
+              image="/assets/card2.svg"
+              title="Tailored Solutions for Every Industry"
+              description="Innovative solutions for manufacturing excellence. Streamline your production and enhance efficiency across."
+            />
+            <HomeCard
+              image="/assets/card3.svg"
+              title="End-to-End Manufacturing Expertise"
+              description="Comprehensive solutions for manufacturers. State-of-the-art technology and dedicated support for optimal output."
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className=" relative py-16 pb-25">
+        <div className="absolute top-0 left-0 w-full h-50 bg-bgsec clip-top-left-triangle z-0"></div>
+
+        <div className="relative max-w-6xl mx-auto px-4 text-center z-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-3">
+            Our trusted partners and industry references
+          </h2>
+          <p className="text-gray-500 mb-4">
+            Explore how our experience in manufacturing enhances your business
+            operations.
+          </p>
+          <a
+            href="#success-stories"
+            className="text-primary font-medium hover:underline inline-flex items-center mb-10"
+          >
+            Explore our success stories
+            <svg
+              className="ml-2 w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+            >
+              <path d="M12.293 3.293a1 1 0 011.414 0L18 7.586a1 1 0 010 1.414l-4.293 4.293a1 1 0 01-1.414-1.414L14.586 9H4a1 1 0 110-2h10.586l-2.293-2.293a1 1 0 010-1.414z" />
+            </svg>
+          </a>
+          <Partner />
+        </div>
+      </section>
+
+      {/* <Footer /> */}
     </div>
   );
 }
+
+export default Home;
