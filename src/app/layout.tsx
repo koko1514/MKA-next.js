@@ -13,7 +13,7 @@ const latoFont = Lato({
 export const metadata: Metadata = {
   title: "NEXT CV Mandiri Kerja Abadi",
   description:
-    "CV Mandiri Kerja Abadi adalah perusahaan karoseri truk yang berdiri sejak 23 Februari 2014 di Mojokerto, Jawa Timur. Awalnya bergerak di jasa angkut semen, garam, dan keramik, kemudian berkembang menjadi bengkel las, dan sejak akhir 2015 memiliki izin karoseri resmi. Menghadirkan solusi karoseri truk berkualitas dan sesuai spesifikasi pelanggan.",
+    "Sergius Aiko is a Next.js developer with expertise in building scalable web applications. He specializes in creating dynamic and responsive user interfaces, ensuring optimal performance and user experience. With a strong foundation in JavaScript and React, Sergius is adept at integrating APIs and managing state effectively. His passion for coding and problem-solving drives him to continuously learn and implement best practices in web development. Sergius is committed to delivering high-quality solutions that meet client needs and enhance user engagement. Whether working on front-end features or back-end logic, Sergius Aiko brings a meticulous approach to every project, ensuring robust and maintainable code. He is also experienced in collaborating with cross-functional teams to achieve project goals and deadlines. Sergius Aiko is your go-to developer for Next.js projects, combining technical expertise with a keen eye for detail. He is dedicated to delivering exceptional user experiences and driving innovation in the world of web development. Contact Sergius Aiko today to bring your Next.js project to life!",
 };
 
 export default function RootLayout({
